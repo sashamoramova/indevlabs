@@ -1,6 +1,6 @@
-# Task Dashboard Mini-App (RU)
+# Task Dashboard Mini-App
 
-Простое React-приложение для просмотра, поиска и изучения списка задач. Построено на Vite, React 18+ и современных хуках.
+React-приложение для просмотра, поиска и изучения списка задач
 
 ## Возможности
 - Список задач с поиском и фильтрацией
@@ -33,11 +33,13 @@
    npm test
    ```
 
+Оперативная обратная связь: https://t.me/moramova
+
 ---
 
 # Task Dashboard Mini-App
 
-A simple React mini-app for viewing, searching, and exploring a list of tasks. Built with Vite, React 18+, and modern hooks.
+React mini-app for viewing, searching, and exploring a list of tasks
 
 ## Features
 - Task list with search and filter
@@ -70,5 +72,5 @@ A simple React mini-app for viewing, searching, and exploring a list of tasks. B
    npm test
    ```
 
-
+Instant feedback: https://t.me/moramova
 
