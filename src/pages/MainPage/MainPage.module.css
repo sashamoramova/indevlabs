@@ -1,4 +1,10 @@
-/* MainPage styles */
+.welcomeTitle,
+.welcomeText {
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
 
 .title {
   color: #222;
@@ -28,4 +34,8 @@
   color: #444;
   font-size: 1rem;
   padding-left: 20px;
+}
+
+p {
+    margin-top: 10px;
 }

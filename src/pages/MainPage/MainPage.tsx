@@ -6,6 +6,10 @@ export function MainPage(): JSX.Element {
     <>
       <h1 className={styles.title}>Task Dashboard Mini-App</h1>
       <div className={styles.container}>
+        <p className={styles.welcomeTitle}>Hello indevlabs team!</p>
+        <p className={styles.welcomeText}>
+          I'm glad you checked out my test mini-app.
+        </p>
         <p className={styles.description}>
           This React mini-app allows you to view, search, and explore a list of
           tasks. You can filter tasks using the search input, and click any task
@@ -20,6 +24,16 @@ export function MainPage(): JSX.Element {
           <li>Accessible UI (aria attributes)</li>
           <li>Fast and simple user experience</li>
         </ul>
+        <p>
+          If you decide to move forward, you can contact me via Telegram:{" "}
+          <a
+            href="https://t.me/moramova"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @moramova
+          </a>
+        </p>
       </div>
     </>
   );
