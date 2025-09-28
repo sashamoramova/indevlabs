@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px;
+}
+
+.taskContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

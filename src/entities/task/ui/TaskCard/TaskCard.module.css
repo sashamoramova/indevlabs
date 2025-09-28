@@ -1,0 +1,60 @@
+.card {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  width: 400px;
+  height: 200px;
+}
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #666;
+}
+
+.body {
+  margin: 0 0 16px 0;
+  color: #666;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  font-size: 14px;
+  color: #888;
+}
+
+.deleteBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff4444;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.deleteBtn:hover {
+  background-color: #ff0000;
+}
+
+.goToTaskPageBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4477ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.goToTaskPageBtn:hover {
+  background-color: #0044ff;
+}
