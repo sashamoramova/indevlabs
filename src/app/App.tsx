@@ -1,16 +1,7 @@
-import { Provider } from 'react-redux';
-import Router from './router/router';
-// import { AlertProvider } from '@/features/alert';
-import store from './store/store';
+import Router from "./router/router";
 
 function App() {
-  return (
-    <Provider store={store}>
-      {/* <AlertProvider> */}
-        <Router />
-      {/* </AlertProvider> */}
-    </Provider>
-  );
+  return <Router />;
 }
 
 export default App;
