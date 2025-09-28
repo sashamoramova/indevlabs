@@ -1,12 +1,14 @@
 .container {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  padding: 40px;
+  align-items: flex-start;
+  min-height: calc(100vh - 160px);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #fafafa 100%);
 }
 
-.taskContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
 }

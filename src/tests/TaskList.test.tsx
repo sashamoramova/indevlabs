@@ -33,7 +33,7 @@ describe('TaskList', () => {
         <TaskList />
       </MemoryRouter>
     );
-    const input = screen.getByPlaceholderText('Поиск задач...');
+    const input = screen.getByPlaceholderText('Search tasks...');
     fireEvent.change(input, { target: { value: 'Test' } });
     expect(screen.getByText('Test Task 1')).toBeInTheDocument();
     expect(screen.queryByText('Another Task')).not.toBeInTheDocument();
@@ -46,7 +46,7 @@ describe('TaskList', () => {
         <TaskList />
       </MemoryRouter>
     );
-    expect(screen.getByText('Загрузка...')).toBeInTheDocument();
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
 
     (useTasks as jest.Mock).mockReturnValueOnce({ tasks: [], loading: false, error: 'Ошибка' });
     render(

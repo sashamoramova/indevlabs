@@ -1,14 +1,14 @@
-import styles from './TaskList.module.css';
-import React from 'react';
-import { TaskCard } from '@/entities/task';
-import { useNavigate } from 'react-router';
-import { CLIENT_ROUTES } from '@/shared/enums/clientRoutes';
-import { useTasks } from '@/entities/task/hooks/useTasks';
+import styles from "./TaskList.module.css";
+import React from "react";
+import { TaskCard } from "@/entities/task";
+import { useNavigate } from "react-router";
+import { CLIENT_ROUTES } from "@/shared/enums/clientRoutes";
+import { useTasks } from "@/entities/task/hooks/useTasks";
 
 export default function TaskList() {
   const { tasks, loading, error } = useTasks();
   const navigate = useNavigate();
-  const [filter, setFilter] = React.useState('');
+  const [filter, setFilter] = React.useState("");
 
   const handleGoToTask = (id: number) => {
     navigate(`${CLIENT_ROUTES.TASKS}/${id}`);
@@ -18,12 +18,12 @@ export default function TaskList() {
     setFilter(e.target.value);
   };
 
-  const filteredTasks = tasks.filter(task =>
+  const filteredTasks = tasks.filter((task) =>
     task.title.toLowerCase().includes(filter.toLowerCase())
   );
 
   if (loading) {
-    return <div className={styles.container}>Загрузка...</div>;
+    return <div className={styles.container}>Loading...</div>;
   }
 
   if (error) {
@@ -36,20 +36,18 @@ export default function TaskList() {
         type="text"
         value={filter}
         onChange={handleFilterChange}
-        placeholder="Поиск задач..."
-        aria-label="Фильтр задач по названию"
+        placeholder="Search tasks..."
+        aria-label="Search tasks by title"
         className={styles.searchInput}
       />
       {filteredTasks.length === 0 ? (
-        <div>Нет задач</div>
+        <div className={styles.noTasks}>No tasks found</div>
       ) : (
-        filteredTasks.map((task) => (
-          <TaskCard
-            key={task.id}
-            task={task}
-            goToTaskPage={handleGoToTask}
-          />
-        ))
+        <div className={styles.tasksGrid}>
+          {filteredTasks.map((task) => (
+            <TaskCard key={task.id} task={task} goToTaskPage={handleGoToTask} />
+          ))}
+        </div>
       )}
     </div>
   );

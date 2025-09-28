@@ -19,13 +19,7 @@ export function OneTaskPage(): JSX.Element {
 
   return (
     <div className={styles.container}>
-      {task ? (
-        <div className={styles.taskContainer}>
-          <TaskCard task={task} />
-        </div>
-      ) : (
-        <div>Задача не найдена</div>
-      )}
+      {task ? <TaskCard task={task} /> : <div>No task found</div>}
     </div>
   );
 }
